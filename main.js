@@ -12,7 +12,7 @@ var config = {
     },
 
     // Ajout des differentes scenes dans le jeu (donc la toutes les prochaines scenes que tu fais tu les met la dedans avec une virgule)
-    scene: [scene_potager] 
+    scene: [scene_potager, scene_champ, scene_poule, scene_finale] 
 };
 
 
