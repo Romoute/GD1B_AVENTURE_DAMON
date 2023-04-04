@@ -19,4 +19,19 @@ class scene_potager extends Phaser.Scene {
     
     }
 
+
+preload() {
+
+
+
+}
+
+create() {
+
+
+    
+}
+
+
+
 }
