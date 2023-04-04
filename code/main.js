@@ -22,6 +22,8 @@ function controlPlayer(player, cursors){
 
     player.body.velocity.normalize()
   //DEPLACEMENTS DU JOUEUR
+
+  
     if (cursors.up.isDown) {
         player.setVelocityY(-player.speed); 
         player.dir = "up";
