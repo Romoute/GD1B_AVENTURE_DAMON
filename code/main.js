@@ -1,5 +1,9 @@
-import scene_potager from './scene_potager.js';
 import menu from './menu.js';
+import scene_potager from './scene_potager.js';
+import scene_champ from './scene_champ.js';
+import scene_poule from './scene_poule.js';
+import scene_finale from './scene_finale.js';
+
 
 // ----- CONFIGURATION INITIALE -----
 var config = {
@@ -23,9 +27,7 @@ game.scene.start("menu");
 
 function controlPlayer(player, cursors){
 
-    player.body.velocity.normalize()
-  //DEPLACEMENTS DU JOUEUR
-
+  
   
     if (cursors.up.isDown) {
         player.setVelocityY(-player.speed); 

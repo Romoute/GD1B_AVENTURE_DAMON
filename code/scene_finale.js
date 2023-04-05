@@ -2,10 +2,12 @@
 // ----- CLASSE SCENE_FINALE -----
 // Chaque classe de scene est dans un fichier different (comme en prog objet en general)
 
-class scene_finale extends Phaser.Scene {
+export default class scene_finale extends Phaser.Scene {
 
     constructor(){
-        super("scene_finale");
+        super({
+            key: "scene_finale"
+    });
     }
 
     // ----- INITIALISATION DES DONNEES DU JOUEUR -----
