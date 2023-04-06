@@ -23,27 +23,3 @@ var config = {
 
 var game = new Phaser.Game(config);
 game.scene.start("menu");
-
-
-function controlPlayer(player, cursors){
-
-  
-  
-    if (cursors.up.isDown) {
-        player.setVelocityY(-player.speed); 
-        player.dir = "up";
-        
-    }
-    else if (cursors.down.isDown) {       
-        player.setVelocityY(player.speed); 
-        player.dir = "down";     
-    }
-    else if (cursors.left.isDown) { 
-        player.setVelocityX(-player.speed); 
-        player.dir = "left";
-    }
-    else if (cursors.right.isDown) { 
-        player.setVelocityX(player.speed); 
-        player.dir = "right";
-    }
-}
