@@ -23,10 +23,34 @@ export default class scene_champ extends Phaser.Scene {
 
     preload(){
         
-
+        this.load.spritesheet('carotte_face', 'assets/animation_carotte/carotte_face.png',
+            { frameWidth: 32, frameHeight: 64});
+        this.load.spritesheet('carotte_dos', 'assets/animation_carotte/carotte_dos.png',
+            { frameWidth: 32, frameHeight: 64});    
+        this.load.spritesheet('carotte_gauche', 'assets/animation_carotte/carotte_gauche.png',
+            { frameWidth: 32, frameHeight: 64});
+        this.load.spritesheet('carotte_droite', 'assets/animation_carotte/carotte_droite.png',
+            { frameWidth: 32, frameHeight: 64});     
+            this.load.spritesheet('carotte_face_econome', 'assets/animation_carotte_econome/carotte_face_econome.png',
+            { frameWidth: 97, frameHeight: 106});
+        this.load.spritesheet('carotte_dos_econome', 'assets/animation_carotte_econome/carotte_dos_econome.png',
+            { frameWidth: 48, frameHeight: 80});    
+        this.load.spritesheet('carotte_gauche_econome', 'assets/animation_carotte_econome/carotte_gauche_econome.png',
+            { frameWidth: 64, frameHeight: 64});
+        this.load.spritesheet('carotte_droite_econome', 'assets/animation_carotte_econome/carotte_droite_econome.png',
+            { frameWidth: 64, frameHeight: 64});   
+        this.load.spritesheet('pdt_face', 'assets/pdt_face.png',
+            { frameWidth: 34, frameHeight: 66});
+        
+        this.load.image('econome', 'assets/econome.png');
+        
+        this.load.image('hp1', 'assets/hp/vie_1.png');
+        this.load.image('hp2', 'assets/hp/vie_2.png');
+        this.load.image('hp3', 'assets/hp/vie_3.png');
+        this.load.image('hp4', 'assets/hp/vie_4.png');
 
         this.load.image("Tileset", "assets/tileset_2.png");
-        this.load.tilemapTiledJSON("map1", 'map/scene_2.json');
+        this.load.tilemapTiledJSON("map2", 'map/scene_2.json');
         
 
     }
