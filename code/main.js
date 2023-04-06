@@ -28,7 +28,7 @@ game.scene.start("menu");
 
 
 preload() {
-    
+
     //Barre de vie
     this.load.image('hp1', 'assets/hp/vie_1.png');
     this.load.image('hp2', 'assets/hp/vie_2.png');
@@ -92,9 +92,4 @@ if(this.player.hp == 1){
 if(this.player.hp < 1){
     this.hpUI.setTexture("hp1");
     this.isDead(); 
-}
-
-
-
-
-}
+}}
