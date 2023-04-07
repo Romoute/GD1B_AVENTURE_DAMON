@@ -86,11 +86,6 @@ export default class scene_potager extends Phaser.Scene {
             tileset
         );
 
-        const econome_ramasser = map.createLayer(
-            "econome_ramasser",
-            tileset
-        );
-
 
         const barriere_collision = map.createLayer(
             "barriere_collision",
@@ -105,7 +100,7 @@ export default class scene_potager extends Phaser.Scene {
         this.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
 
 
-       this.player = this.physics.add.sprite(-710, -652, "carotte_face");
+       this.player = this.physics.add.sprite(0, 330, "carotte_face");
        this.player.body.setSize(32, 42 , 300, 100);
        this.player.speed = 300; 
        this.player.direction = "left"; 
@@ -124,7 +119,7 @@ export default class scene_potager extends Phaser.Scene {
        this.mechant.body.immovable = true; 
 
          //Econome
-        this.econome = this.physics.add.sprite(-672, -512, "econome"); 
+        this.econome = this.physics.add.sprite(130, 330, "econome"); 
 
         this.economeAttaque =   this.physics.add.group();
         
