@@ -94,6 +94,8 @@ export default class scene_potager extends Phaser.Scene {
 
         
 
+        
+
      
         this.clavier = this.input.keyboard.createCursorKeys();
         this.keyQ = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.Q);
@@ -123,6 +125,23 @@ export default class scene_potager extends Phaser.Scene {
 
         this.economeAttaque =   this.physics.add.group();
         
+
+
+
+
+        var config = {
+            key: 'carotte_face_animation',
+            frames: this.anims.generateFrameNumbers('carotte_face', { start: 0, end: 7, first: 0 }),
+            frameRate: 200,
+            repeat: -1
+        };
+
+        this.anims.create(config);
+
+        this.add.sprite(400, 300, 'carotte_face').play('carotte_animation_face');
+    
+    
+
 
 
         // ----- CAMERA -----
