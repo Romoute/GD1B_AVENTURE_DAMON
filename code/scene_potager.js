@@ -58,7 +58,7 @@ export default class scene_potager extends Phaser.Scene {
 
     create(){
         
-        
+
         const map = this.add.tilemap("map1");
 
         //JEU DE TUILES
@@ -111,9 +111,10 @@ export default class scene_potager extends Phaser.Scene {
        this.player.aEconome = false; 
        this.player.invincibleFrame = 20; 
 
-       this.hpUI = this.add.image(10, 10, "hp1").setOrigin(0,0);
+       this.hpUI = this.add.image(390, 220, "hp1").setOrigin(0,0);
        this.hpUI.setScrollFactor(0);
-
+       //resize taille barre hp
+       this.hpUI.setScale(0.7);
 
        //Méchant
        this.mechant = this.physics.add.sprite(-750, -652, "pdt_face"); 
@@ -129,16 +130,7 @@ export default class scene_potager extends Phaser.Scene {
 
 
 
-        var config = {
-            key: 'carotte_face_animation',
-            frames: this.anims.generateFrameNumbers('carotte_face', { start: 0, end: 7, first: 0 }),
-            frameRate: 200,
-            repeat: -1
-        };
-
-        this.anims.create(config);
-
-        this.add.sprite(400, 300, 'carotte_face').play('carotte_animation_face');
+       
     
     
 
@@ -155,7 +147,11 @@ export default class scene_potager extends Phaser.Scene {
         // Tracking de la caméra sur le joueur
         this.cameras.main.startFollow(this.player);
 
+        
+        this.cameras.main.setZoom(2.5);
 
+
+        //collisions
         haie_collision.setCollisionByExclusion(-1, true);
         barriere_collision.setCollisionByExclusion(-1, true);
 
